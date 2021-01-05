@@ -1,0 +1,80 @@
+.Home {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100%-2.5rem);
+    flex-flow: column;
+    /* padding-bottom: 5rem; */
+}
+
+/* .AboutPage {
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    border-right: 0.5px solid white;
+    justify-content: center;
+} */
+
+.photo{
+    background-color: azure;
+    width: 99vw;
+    height: 60vh;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* margin: 5px; */
+    object-fit: cover;
+    /* object-position: 20px 10px; */
+    cursor: pointer;
+}
+
+/* .Home img{
+    background-color: azure;
+    width: 99vw;
+    height: 60vh;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 5px;
+    object-fit: cover;
+    object-position: 20px 10px;
+    cursor: pointer;
+} */
+
+/* .Home img:hover{
+    animation: enable 0.3s linear;
+} */
+
+.Home h1{
+    font-family: 'Cinzel', serif;
+}
+
+@keyframes enable {
+    0% {
+        transform: scale(0.5);
+    }
+    60% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+.logos{
+    display: flex;
+    flex-flow: row;
+}
+
+.logo{
+    width: 50px;
+}

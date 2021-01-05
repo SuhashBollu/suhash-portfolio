@@ -1,0 +1,12 @@
+.Background {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.Background title {
+    position: fixed;
+}

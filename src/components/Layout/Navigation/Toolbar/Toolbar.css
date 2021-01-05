@@ -1,0 +1,60 @@
+.Toolbar {
+    height: 56px;
+    width: 100%;
+    position: fixed; /*always at the top, even if we scroll*/
+    top: 0; /*to sit on top*/
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box; /*to make sure the tool bar is sized correctly even with padding*/
+    color: antiquewhite;
+    z-index: 100;
+}
+
+.Toolbar nav {
+    height: 100%;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.Toolbar h1{
+    color: white;
+    font-size: large;
+    font-family: 'Cinzel', serif;
+}
+
+@media(max-width:499px){
+    .DesktopOnly {
+        display: none;
+    }
+}
+
+.button{
+    cursor: pointer;
+    background-color: transparent;
+    width: fit-content;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 17px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: inherit;
+    margin-right: 10px;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    animation: enable 0.2s linear;
+}

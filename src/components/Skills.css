@@ -1,0 +1,44 @@
+.Skills {
+    display: flex;
+    flex-flow: column;
+    width: 90vw;
+    /* background-color: red; */
+    align-items: flex-start;
+    justify-content: center;
+    /* padding-bottom: 2.5rem; */
+    /* background-color: red; */
+}
+
+.row {
+    display: flex;
+    flex-direction: row wrap;
+    /* justify-content: flex-start; */
+}
+
+@media(max-width:699px){
+    .Skills {
+        align-items: center;
+    }
+
+    .row{
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.skill {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.Skills img {
+    width: 100px;
+}
+
+.Skills h3{
+    left: 0;
+}

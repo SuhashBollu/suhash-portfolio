@@ -1,0 +1,38 @@
+.Button {
+    /* outline: none; */
+    display: flex;
+    cursor: pointer;
+    height: auto;
+    background-color: transparent;
+    width: 60%;
+    color: white;
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* box-shadow: 2px 2px 2px white; */
+}
+
+.Button:hover, .Button:active{
+    background-color: white;
+    color: #000;
+    border: 2px solid black;
+    animation: enable 0.2s linear;
+}
+
+@keyframes enable {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

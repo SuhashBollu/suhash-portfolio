@@ -1,0 +1,50 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 70%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    /* left: 15%; */
+    color: black;
+    top: 30%;
+    align-self: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+.Modal button{
+    position: relative;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: auto;
+    background-color: transparent;
+    width: fit-content;
+    color: black;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: inherit;
+    margin-right: 10px;
+}
+
+.Modal button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    animation: enable 0.2s linear;
+}
+
+@media(min-width:600px){
+    .Modal{
+        width: 500px;
+        left: calc(50%-250px);
+    }
+}
