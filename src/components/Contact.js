@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Contact.css';
 import Validator from 'validator';
+import { Redirect } from 'react-router-dom';
 import Modal from './UI/Modal/Modal';
 import Auxi from '../hoc/Auxi';
 
@@ -24,7 +25,8 @@ class Contact extends Component {
             nameError: '',
             emailError: '',
             messageError: '',
-            showModal: false
+            showModal: false,
+            sent: false
         }
     }
 
@@ -80,6 +82,10 @@ class Contact extends Component {
 
     }
 
+    reset_fields = () =>{
+        this.setState({name:'', message:'', email:''});
+    }
+
     validateMessage = () => {
         if (Validator.isEmpty(this.refs.message.value)) {
             this.setState({ messageError: "Message Required!!" });
@@ -115,24 +121,27 @@ class Contact extends Component {
     }
 
     render() {
-        return (
-            <Auxi>
+
+        let contact = <Redirect to="/"/>
+
+        if(!this.state.sent){
+            contact = (<div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
                 <Modal show={this.state.showModal}>
                     <h2>Your message is succesfully sent. Thanks for contacting me..</h2>
-                    <button onClick={() => this.setState({ showModal: false })}>OK</button>
+                    <button onClick={() => this.setState({ showModal: false, sent:true })}>OK</button>
                 </Modal>
                 <div className="Contact">
                     <strong><h1>Thanks for taking the time to reach out.</h1></strong>
                     <form ref='contact_form' target="transFrame" method='post' style={{ width: '100%' }} action='https://script.google.com/macros/s/AKfycbwO0-m15V--K96I4wTVul02uc8z_2RTykWoyBeBKlrnEU68R9-F/exec'>
 
-                        <div style={{display:'flex'}}>
-                            <div style={{padding:'5px', width:'50%'}}>
+                        <div className="name-email">
+                            <div className="input-wrapper">
                                 <div style={{ width: '100%', display: 'flex', flexFlow: 'row', justifyContent: 'space-between' }}><p>Name</p>
                                 {this.state.nameError !== "" ? <p className="Pra">{this.state.nameError}</p> : null}</div>
                                 <input onChange={this.validateName} ref="name" type="text" name="name" placeholder="Your Name" />
                             </div>
 
-                            <div style={{padding:'5px', width:'50%'}}>
+                            <div className="input-wrapper">
                                 <div style={{ width: '100%', display: 'flex', flexFlow: 'row', justifyContent: 'space-between' }}><p>Email</p>
                                 {this.state.emailError !== "" ? <p className="Pra">{this.state.emailError}</p> : null}</div>
                                 <input onChange={this.validateEmail} ref="email" type="email" name="email" placeholder="Your Email" />
@@ -150,8 +159,10 @@ class Contact extends Component {
                         </div>
                     </form>
                 </div>
-            </Auxi>
-        );
+            </div>)
+        }
+
+        return contact;
     }
 }
 

@@ -1,16 +1,19 @@
 .Modal {
     position: fixed;
     z-index: 500;
+    display: block;
+    /* flex: 0 0 auto; */
     background-color: white;
-    width: 70%;
+    width: 100vw;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px black;
     padding: 16px;
-    /* left: 15%; */
+    /* left: 35%; */
     color: black;
     top: 30%;
-    align-self: center;
+    /* align-self: center; */
     box-sizing: border-box;
+    /* background-color: aqua; */
     transition: all 0.3s ease-out;
 }
 

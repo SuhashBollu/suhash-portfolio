@@ -8,6 +8,12 @@
     /* font-family: 'Open Sans', sans-serif; */
 }
 
+@media(max-width:599px){
+    .Contact{
+        width: 90vw;
+    }
+}
+
 .Contact input{
     color: white;
     background-color: rgba(255, 255, 255, 0.0);
@@ -16,6 +22,25 @@
 .Contact textarea{
     color: white;
     background-color: rgba(255, 255, 255, 0.0);
+}
+
+.name-email{
+    display: flex;
+}
+
+@media(max-width:599px){
+    .name-email{
+        flex-flow: column;
+    }
+}
+.input-wrapper{
+    width: 50%;
+    padding: 5px;
+}
+@media(max-width:599px){
+    .input-wrapper{
+        width: 100%;
+    }
 }
 
 ::placeholder{

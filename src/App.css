@@ -1,22 +1,24 @@
 .App {
   text-align: center;
   position: fixed;
-  background-image: url(https://cdn.suwalls.com/wallpapers/computers/binary-code-23704-2880x1800.jpg);
+  /* background-image: url(https://cdn.suwalls.com/wallpapers/computers/binary-code-23704-2880x1800.jpg); */
+  background-image: url('./assets/images/binary-code.jpg');
   background-color: black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
   color: white;
 }
 
 .DarkLayer {
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
+  /* background-color: blue; */
+  display: block;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -27,13 +29,13 @@
 
 .DarkLayer::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 	background-color: transparent;
 }
 
 .DarkLayer::-webkit-scrollbar
 {
-	width: 6px;
+	width: 3px;
 	background-color: transparent;
 }
 

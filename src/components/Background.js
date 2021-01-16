@@ -15,7 +15,7 @@ const items = [{
 
 const background = (props) => (
     <div className="Background">
-        <h1 className="title">Background</h1>
+        {/* <h1 className="title">Background</h1> */}
         <VerticalTimeline>
             <VerticalTimelineElement
                 className="vertical-timeline-element"
@@ -28,7 +28,7 @@ const background = (props) => (
                 <h3 className="vertical-timeline-element-title">MS in Computer Science</h3>
                 <h4 className="vertical-timeline-element-subtitle">University at Buffalo</h4>
                 <p>
-                    Courses: Algorithms, Databases
+                    Courses: Analysis of Algorithms, Object Oriented Analysis and Design,  Distributed Systems, Computer Vision and Image Processing, Information Retrieval, Machine Learning, Data Models and Query Languages, Data Intensive Computing
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -42,7 +42,7 @@ const background = (props) => (
                 <h3 className="vertical-timeline-element-title">Software Developer</h3>
                 <h4 className="vertical-timeline-element-subtitle">Tata Consultancy Services</h4>
                 <p>
-                    Spring Batch, JAX-WS Web Clients, Oracle SQL Developer
+                    J2EE, Spring Batch, JAX-WS Web Clients, Oracle SQL Developer
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
