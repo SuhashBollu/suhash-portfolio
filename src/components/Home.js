@@ -21,9 +21,9 @@ const home = () => {
           large-scale systems, skilled at working in agile development
           environments and collaborating effectively within diverse teams.
         </p>
-        <a className="resume" href={Resume} target="_blank">
+        {/* <a className="resume" href={Resume} target="_blank">
           View Resume
-        </a>
+        </a> */}
         <div className="logos">
           <a href="https://github.com/SuhashBollu" target="_blank">
             <img
